@@ -7,4 +7,9 @@ services:
       - 5000:5000
     volumes:
       - ./input:/app/input
-    network_mode: "host"
+    networks:
+      - stat_network
+
+networks:
+  stat_network:
+    name: stat_network
