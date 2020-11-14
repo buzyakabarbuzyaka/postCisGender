@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  post-cis-gender:
+    build: .
+    container_name: "postCisGender"
+    ports:
+      - 5000:5000
+    volumes:
+      - ./input:/app/input
+    network_mode: "host"
